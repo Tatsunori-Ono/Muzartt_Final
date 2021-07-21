@@ -438,6 +438,10 @@ position: relative;
      border-bottom: #000 solid 1px;
 }
 
+.about .titlepage p {
+     color: #6d6d6d; font-size: 17px; line-height: 28px;
+}
+
 .blue {color: #45b6fe;}
 .about .titlepage h2 {
      color: #272f43;
