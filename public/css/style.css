@@ -392,7 +392,8 @@ position: relative;
 /** usp section **/
 
 .usp {
-     padding: 90px 0px 40px 0px; border-top: #000 solid 1px;
+     padding: 90px 0px 40px 0px; 
+     border-top: #000 solid 1px;
 }
 .black_bg {margin-bottom: 50px;}
 .usp .titlepage p {color: #6d6d6d; font-size: 17px; line-height: 28px;}
@@ -437,8 +438,6 @@ position: relative;
      border-bottom: #000 solid 1px;
 }
 
-
-
 .blue {color: #45b6fe;}
 .about .titlepage h2 {
      color: #272f43;
@@ -465,9 +464,11 @@ position: relative;
 
 .Testimonial {
      margin-top: 90px;
+     border-top: #000 solid 1px;
 }
 
 .Testimonial .titlepage h2 {
+     margin-top: 90px;
      color: #474646;
      margin-bottom: 0px;
      padding-bottom: 20px;
@@ -477,8 +478,6 @@ position: relative;
      color: #474646;
      font-size: 17px; line-height: 28px;
 }
-
-
 
 .Testimonial_box {
      text-align: left;
@@ -498,7 +497,6 @@ position: relative;
      line-height: 28px;
      padding: 25px 0;
 }
-
 
 #myCarousel .carousel-control-prev, #myCarousel .carousel-control-next {
 width: 62px;
@@ -521,14 +519,14 @@ border-radius: 30px;
 /** contact section **/
 
 
-.wines h3 {
+.contact h3 {
  color: #181818;  
  font-weight: 600;
  font-size: 37px;
 line-height: 50px; 
 }
 
-.wines p {
+.contact p {
      font-size:17px; 
      line-height: 32px; 
      color: #232324; 

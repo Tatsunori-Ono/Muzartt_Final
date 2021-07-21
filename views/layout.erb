@@ -35,7 +35,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">Mission</a></li>
-                    <li><a class="dropdown-item" href="#">Smth</a></li>
+                    <li><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScM3Jh6L9kgZnHwSybwpHzWlKA3rOGPg92Szm2KwhjIKDn0Yg/viewform">Survey</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Smth</a></li>
                   </ul>
@@ -51,10 +51,10 @@
               <!--list-style: none is for deleting the bullet points-->
               <% unless session[:user] %>
                 <li style="list-style: none;">New User? /</li>
-                <li class="active" style="list-style: none;"><a href="/signin">Sign In /<span class="sr-only">(current)</span></a></li>
+                <li class="active" style="list-style: none;"><a href="/signin">Sign In /<span class="sr-only"></span></a></li>
                 <li style="list-style: none;"><a href="/signup">Sign Up</a></li>
               <% else %>
-                <li style="list-style: none;">Hello, <%= current_user.mail %>!/</li>
+                <li style="list-style: none;">Hello, <%= current_user.name_first %>!/</li>
                 <li style="list-style: none;"><a href="/signout">Log Out</a></li>
               <% end %>
             </div>

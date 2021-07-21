@@ -7,7 +7,7 @@ require './models'
 enable :sessions
 
 before do
-    if !current_user && !["/", "/signin", "/signup"].include?(request.path_info)  
+    if !current_user && !["/", "/signin", "/signup", "/mailing_list"].include?(request.path_info)  
         redirect '/'
     end
 end
@@ -30,6 +30,10 @@ get '/signup' do
     erb :sign_up
 end
 
+get '/mailing_list' do
+   erb :home
+end
+
 post '/signin' do
     user = User.find_by(mail: params[:mail])
     if user && user.authenticate(params[:password])
@@ -39,8 +43,7 @@ post '/signin' do
 end
 
 post '/signup' do
-    @user = User.create(mail:params[:mail], password:params[:password],
-    password_confirmation:params[:password_confirmation])
+    @user = User.create(name_first:params[:name_first], name_last:params[:name_last], mail:params[:mail], password:params[:password],password_confirmation:params[:password_confirmation])
     if @user.persisted?
         session[:user] = @user.id
     end
@@ -49,5 +52,10 @@ end
 
 get '/signout' do
     session[:user] = nil
+    redirect '/'
+end
+
+post '/mailing_list' do
+    @mailing_list = Mailing_list.create(name:params[:name], phone_number:params[:phone_number], mail:params[:email], message:params[:message])
     redirect '/'
 end
