@@ -39,7 +39,7 @@ post '/signin' do
     if user && user.authenticate(params[:password])
         session[:user] = user.id
     end
-    redirect '/'
+    redirect '/platform'
 end
 
 post '/signup' do
@@ -47,7 +47,7 @@ post '/signup' do
     if @user.persisted?
         session[:user] = @user.id
     end
-    redirect '/'
+    redirect '/platform'
 end
 
 get '/signout' do
@@ -58,4 +58,8 @@ end
 post '/mailing_list' do
     @mailing_list = Mailing_list.create(name:params[:name], phone_number:params[:phone_number], mail:params[:email], message:params[:message])
     redirect '/'
+end
+
+get '/platform' do
+   erb :platform
 end
