@@ -3,9 +3,12 @@
     <head>
         <!--Font Awesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!--CSS-->
+        <link rel="stylesheet" href="/css/platform.css">
+        <!--Board Size-->
         <style>
             #board {
-                width: 800px;
+                width: 1300px;
                 height: 500px;
                 border: 1px solid black;
             }
@@ -17,7 +20,7 @@
         <!--Music Player CSS-->
         <link rel="stylesheet" type="text/css" href="/css/music_player.css">
     </head>
-    <body>
+    <body class="main-layout">
         <!--Music Player-->
         <div class="music_player_body">
             <div class="music-container" id="music-container">
@@ -50,7 +53,7 @@
         <!--Drawing Board-->
         <div id="board"></div>
         <div id="button_center">
-            <button id="save_drawing">Save Drawing (Please take a screenshot just in case)</button>
+            <button id="save_drawing">Save Drawing</button>
         </div>
         <script>
             $(document).ready(function(){
@@ -64,7 +67,8 @@
                         { Navigation: { back: true, forward: true} },
                         'DrawingMode'
                     ],
-                    webStorage: 'local'
+                    webStorage: 'session',
+                    enlargeYourContainer: true
                 });
                 $("#save_drawing").click(function(){
                     domtoimage.toBlob(document.getElementById('board'))
@@ -79,5 +83,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/drawingboard.js/0.4.6/drawingboard.min.js"></script>
         <!--Music Player JS-->
         <script type="text/javascript" src="/js/music_player.js"></script>
+        <!--YouTube Playlist-->
+        <div class="wrap_youtube">
+            <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLxvodScTx2RtAOoajGSu6ad4p8P8uXKQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </body>
 </html>
