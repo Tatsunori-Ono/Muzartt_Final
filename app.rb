@@ -8,6 +8,7 @@ enable :sessions
 
 before do
     if !current_user && !["/", "/signin", "/signup", "/mailing_list", "/mission_statement", "/offer", "/news"].include?(request.path_info)  
+        flash[:notice] = "Please sign up before accessing!"
         redirect '/'
     end
 end
@@ -74,4 +75,8 @@ end
 
 get '/news' do
    erb :news 
+end
+
+get '/checkout' do
+   erb :checkout 
 end

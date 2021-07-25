@@ -9,6 +9,7 @@ gem 'activerecord', '~> 6.1'
 gem 'pg', '~> 1.2'
 gem 'rake', '~> 13.0'
 gem 'bcrypt'
+gem 'sinatra-flash'
 
 group :development do
   gem 'debase'
