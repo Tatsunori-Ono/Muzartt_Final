@@ -7,7 +7,7 @@ require './models'
 enable :sessions
 
 before do
-    if !current_user && !["/", "/signin", "/signup", "/mailing_list"].include?(request.path_info)  
+    if !current_user && !["/", "/signin", "/signup", "/mailing_list", "/mission_statement", "/offer", "/news"].include?(request.path_info)  
         redirect '/'
     end
 end
@@ -62,4 +62,16 @@ end
 
 get '/platform' do
    erb :platform
+end
+
+get '/mission_statement' do
+   erb :mission_statement 
+end
+
+get '/offer' do
+   erb :offer
+end
+
+get '/news' do
+   erb :news 
 end
