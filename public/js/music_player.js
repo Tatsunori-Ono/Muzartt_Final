@@ -12,7 +12,7 @@ const cover = document.getElementById('cover');
 // const durTime = document.querySelector('#durTime');
 
 // Song titles
-const songs = ['The_Fat_Rat', 'phony'];
+const songs = ['Moonlight_Sonata_3rd_Movement', 'Chopin_Etude_Op.10_No.4', 'Czerny_op.740_No.50'];
 
 // Keep track of song
 let songIndex = 0;
@@ -24,7 +24,7 @@ loadSong(songs[songIndex]);
 function loadSong(song) {
   title.innerText = song;
   audio.src = `music/${song}.mp3`;
-  cover.src = `images/${song}.jpg`;
+  cover.src = `images/${song}.png`;
 }
 
 // Play song
