@@ -1,6 +1,16 @@
+.main-layout p {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .pricing_all {
     height: 100vh;
-    padding: 100px;
+    padding: 80px;
 }
 
 .white-mode {

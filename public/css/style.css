@@ -48,10 +48,11 @@ body {
      margin-top: 8px;
      font-weight: bold;
      text-align: center;
-     font-size: 25px;
-     font-family: monaco, monospace;
+     font-size: 35px;
+     font-family: "Times New Roman", Times, serif;
+     font-style: italic;
+     text-decoration: underline;
      color: blue;
-     text-shadow: 2px 2px red;
 }
 
 a {
