@@ -7,7 +7,7 @@ require './models'
 enable :sessions
 
 before do
-    if !current_user && !["/", "/signin", "/signup", "/mailing_list", "/mission_statement", "/offer", "/news"].include?(request.path_info)  
+    if !current_user && !["/", "/signin", "/signup", "/mailing_list", "/mission_statement", "/offer", "/news", "/terms_of_service"].include?(request.path_info)  
         flash[:notice] = "Please sign up or sign in before accessing!"
         redirect '/'
     end
@@ -79,4 +79,8 @@ end
 
 get '/checkout' do
    erb :checkout 
+end
+
+get '/terms_of_service' do
+    erb :termsofservice
 end
