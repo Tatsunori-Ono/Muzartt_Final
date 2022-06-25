@@ -20,17 +20,25 @@
         <!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-            <a class="navbar-brand" href="/">Muzartt</a>
+            <a class="navbar-brand" href="/">
+              <img src="/images/logo_noBG_cropped.png" width="176.16" height="48" class="d-inline-block align-top" alt="Muzartt">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 18px;">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/platform">Platform</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://www.instagram.com/muzarttapp/">Instagram</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.facebook.com/profile.php?id=100070107505331" tabindex="-1" aria-disabled="true">Facebook</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,23 +50,17 @@
                     <li><a class="dropdown-item" href="/offer">Offers</a></li>
                     <li><a class="dropdown-item" href="/news">News</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScM3Jh6L9kgZnHwSybwpHzWlKA3rOGPg92Szm2KwhjIKDn0Yg/viewform">Survey (EN)</a></li>
-                    <li><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfhkID4JtbvZQqZrpNViO1CGLXcWjkMfQFrlgu0uN6TfX8d3A/viewform">Survey (ID)</a></li>
+                    <li><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScM3Jh6L9kgZnHwSybwpHzWlKA3rOGPg92Szm2KwhjIKDn0Yg/viewform">Survey (English)</a></li>
+                    <li><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfhkID4JtbvZQqZrpNViO1CGLXcWjkMfQFrlgu0uN6TfX8d3A/viewform">Survey (Indonesian)</a></li>
                   </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" target="_blank" href="https://www.instagram.com/muzarttapp/">Instagram</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.facebook.com/profile.php?id=100070107505331" tabindex="-1" aria-disabled="true">Facebook</a>
                 </li>
               </ul>
               <!--If the user is logged in and if the user is not logged in-->
               <!--list-style: none is for deleting the bullet points-->
               <% unless session[:user] %>
-                <li style="list-style: none;">New User? /</li>
-                <li class="active" style="list-style: none;"><a href="/signin">Sign In /<span class="sr-only"></span></a></li>
-                <li style="list-style: none;"><a href="/signup">Sign Up</a></li>
+                <li class="active" style="list-style: none; font-size: 18px;"><a href="/signin"><strong>Sign In</strong><span class="sr-only"></span></a></li>
+                <li style="list-style: none;">/ OR /</li>
+                <li style="list-style: none; font-size: 18px;"><a href="/signup"><strong>Sign Up</strong></a></li>
               <% else %>
                 <li style="list-style: none;">Hello, <%= current_user.name_first %>!/</li>
                 <li style="list-style: none;"><a href="/signout">Log Out</a></li>
